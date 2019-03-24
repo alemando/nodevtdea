@@ -2,7 +2,7 @@
   "name": "nodevtdea",
   "version": "1.0.1",
   "description": "primer trabajo",
-  "main": "index.js",
+  "main": "src/app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,14 @@
   },
   "homepage": "https://github.com/alemando/nodevtdea#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
