@@ -6,6 +6,12 @@ body{
     min-height:100%;
     padding-top: 60px;
 }
+
+h1{
+    margin: auto;
+    text-align: center;
+}
+
 .header_nav{
     background-color: #9b9b9b;
     height: 60px;
@@ -43,10 +49,6 @@ footer a{
 footer a:hover{
     color: #444;
 }
-footer ul{
-    list-style: none;
-    padding: 0;
-}
 
 #sub_footer{
     border-top: 1px solid #ddd;
@@ -55,21 +57,47 @@ footer ul{
     margin: 20px 0 0 0;
 }
 
-.social_network{
-    list-style: none;
-    margin: 0;
-    float: right;
-}
-
 .copyright{
     text-align: left;
     font-size: 12px;
 }
 
-.social_network li{
-    display: inline;
-    margin: 0 5px;
+#error{
+    text-align: center;
 }
-.social_network li i{
-    font-size: 1.3em;
+
+#nav_div{
+    background-color: #686767;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    
+}
+#nav_div ul{
+    list-style: none;
+    padding: 0;
+}
+#nav_div a{
+    color: #ddd;
+    text-decoration: none;
+}
+
+#nav_div a:hover{
+    color: #444;
+}
+
+.content{
+ padding: 10px;
+}
+
+.btn_submit{
+    background-color: #686767;
+    color: white;
+}
+.btn_submit:hover{
+    background-color: #444;
+}
+
+#men_obl{
+    text-align: center;
 }
