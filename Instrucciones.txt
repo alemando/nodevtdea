@@ -1,5 +1,3 @@
-# nodevtdea
-Trabajo para el curso de NODE
 INSTRUCCIONES
 1. Abra la ruta del archivo en el cmd o su programa de comandos preferida.
 2. Asegurese de tener instalado node.js.
