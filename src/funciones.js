@@ -63,11 +63,74 @@ const save_course = () => {
     return true
 }
 
-let get_course = (id) => listCourses.find((listCourses) => listCourses.id == id);
+let get_course = (id) => listCourses.find((listCourses) => listCourses.id == id)
 
+let get_student = (students, ide) => students.find((student) => student.ide == ide)
+
+const course_status = (id) =>{
+    let course = get_course(id)
+    if(course.status){
+        course.status = false
+    }else{
+        course.status = true
+    }
+} 
+const new_registration = (registration) =>{
+    get_list()
+    let {ide, course, name, email, tel} = registration
+    let student = {
+        ide: ide,
+        name: name,
+        email: email,
+        tel: tel
+    }
+    let selected_course = get_course(course)
+    if (selected_course){
+        let selected_student = get_student((selected_course.students), ide)
+        if(!selected_student){
+            selected_course.students.push(student)
+            res = save_course()
+            if(res){
+                return [true,'Registro exitoso']
+            }
+            else{
+                return [false,'Ocurrio un problema']
+            }
+        }else{
+            return [false,'Ya registrado en el curso']
+        }
+    }
+    else{
+        return [false,'No existe el curso']
+    }
+    
+}
+
+let get_students_filtered = (students, ide) => students.filter((student) => student.ide != ide);
+
+const delete_student = (course, ide)=>{
+    get_list()
+    let selected_course = get_course(course)
+    if (selected_course){
+        let students_filtered = get_students_filtered((selected_course.students), ide)
+        selected_course.students = students_filtered
+        res = save_course()
+        if(res){
+            return [true,'Se ha eliminado exitosamente']
+        }
+        else{
+            return [false,'Ocurrio un problema']
+        }
+    }
+    else{
+        return [false,'No existe el curso']
+    }
+}
 
 module.exports = {
     new_course,
-    get_course,
-    show_courses
+    show_courses,
+    new_registration,
+    course_status,
+    delete_student
 }

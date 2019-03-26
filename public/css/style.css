@@ -101,3 +101,22 @@ footer a:hover{
 #men_obl{
     text-align: center;
 }
+
+.btn-link{
+    text-decoration: none;
+    background-color: #686767;
+    color: white;
+}
+.btn-link p{
+    margin: 0;
+}
+
+.btn-link:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #444;
+}
+
+h2{
+    padding: 10px;
+}
