@@ -3,7 +3,7 @@ const app = express()
 const path = require('path')
 const hbs = require('hbs')
 const bodyParser = require('body-parser')
-require('./helpers/funciones')
+require('./helpers/helpers')
 const {new_course, show_courses, new_registration, course_status, delete_student} = require ('./funciones')
 
 const dirPublic = path.join(__dirname , '../public')

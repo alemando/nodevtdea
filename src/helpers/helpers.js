@@ -56,7 +56,7 @@ hbs.registerHelper('courses_user', (courses)=>{
         }
         str+='<div class="card">'+
                 '<button id="heading-'+id+'"class="card-header btn btn-link collapsed btn-block" type="button" data-toggle="collapse" data-target="#collapse-'+id+'" aria-expanded="false" aria-controls="collapse-'+id+'">'+
-                '<p>ID: '+id+' Nombre: '+name+' Valor: '+cost+'</p>'+
+                '<p>ID: '+id+' Nombre del curso: '+name+' Valor: '+cost+'</p>'+
                 '</button>'+
                 
                 
@@ -107,7 +107,7 @@ hbs.registerHelper('courses_card', (courses)=>{
                 '</thead>'+
                 '<tbody>'
         course.students.forEach(student => {
-            let {ide, student_name, email, tel} = student
+            let {ide, name: student_name, email, tel} = student
                 str+='<tr>'+
                         '<th scope="row">'+ide+'</th>'+
                         '<td>'+student_name+'</td>'+

@@ -68,12 +68,14 @@ let get_course = (id) => listCourses.find((listCourses) => listCourses.id == id)
 let get_student = (students, ide) => students.find((student) => student.ide == ide)
 
 const course_status = (id) =>{
+    get_list()
     let course = get_course(id)
     if(course.status){
         course.status = false
     }else{
         course.status = true
     }
+    save_course()
 } 
 const new_registration = (registration) =>{
     get_list()
