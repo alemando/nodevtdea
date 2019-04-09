@@ -60,7 +60,7 @@ hbs.registerHelper('courses_user', (courses)=>{
                 '</button>'+
                 
                 
-                '<div id="collapse-'+id+'" class="collapse show" aria-labelledby="heading-'+id+'" data-parent="#accordion_courses">'+
+                '<div id="collapse-'+id+'" class="collapse" aria-labelledby="heading-'+id+'" data-parent="#accordion_courses">'+
                 '<div class="card-body">'+
                 '<p>Descripción: '+description+'</p>'+
                 '<p>Modalidad: '+modality+'</p>'+
@@ -91,7 +91,7 @@ hbs.registerHelper('courses_card', (courses)=>{
                 '</button>'+
                 
                 
-                '<div id="collapse-'+id+'" class="collapse show" aria-labelledby="heading-'+id+'" data-parent="#accordion_courses">'+
+                '<div id="collapse-'+id+'" class="collapse" aria-labelledby="heading-'+id+'" data-parent="#accordion_courses">'+
                 '<div class="card-body">'+
                 '<div class="row">'+
                 '<div class="content table-responsive">'+
