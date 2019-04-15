@@ -9,3 +9,5 @@ INSTRUCCIONES
 5. Para ejecutar el programa digite el comando "node src/app"
 (sin comillas).
 6. En la pagina principal 'http://localhost:3000/' encontrara las diferentes opciones para navegar.
+7. link de heroku https://nodetvdea.herokuapp.com/
+y el cordinador creado sus credenciales son identificacion: 12 contraseña: 123
