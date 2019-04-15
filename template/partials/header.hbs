@@ -22,9 +22,32 @@
                     <li class="li_nav nav-item active">
                         <a class="btn_nav btn nav-link" href="/">Inicio</a>
                     </li>
+                    {{#if sesion}}
                     <li class="li_nav nav-item">
                         <a class="btn_nav btn nav-link" href="../cursos">Cursos</a>
+                    </li>
+                    {{/if}}
                 </ul>
+                {{#if sesion}}
+                <ul class="navbar-nav ml-auto">
+                    <li class="li_nav nav-item dropdown">
+                        <a class="btn_nav nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{name}}
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <form action="/" method="POST">
+                            <button class="dropdown-item" href="#">Cerrar sesion</button>
+                        </form>
+                        </div>
+                    </li>
+                </ul>
+                {{else}}
+                <ul class="navbar-nav ml-auto">
+                    <li class="li_nav nav-item">
+                        <a class="btn_nav btn nav-link" href="../login">Iniciar sesion</a>
+                    </li>
+                </ul>
+                {{/if}}
             </div>
         </nav>
     </header>

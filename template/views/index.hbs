@@ -6,27 +6,33 @@
                     <h1>Bienvenido</h1>
                 </div>
             </div>
+            {{#if sesion}}
             <section class="row">
                 <div class="col-md-12">
                     <div id="nav_div" class="nav_div_index">
                         <h4>Opciones</h4>
                         <ul class="link-list">
+                            {{#if isCordinator}}
                             <li>
                                 <a href="../cursos/crear">Crear curso</a>
                             </li>
+                            {{/if}}
                             <li>
                                 <a href="../cursos/">Ver cursos</a>
                             </li>
                             <li>
                                 <a href="../cursos/inscribir">Inscribir</a>
                             </li>
+                            {{#if isCordinator}}
                             <li>
                                 <a href="../cursos/inscritos">ver inscritos</a>
                             </li>
+                            {{/if}}
                         </ul>
                     </div>
                 </div>
             </section>
+            {{/if}}
         </div>
     </main>
 {{>footer}}

@@ -1,4 +1,5 @@
 const hbs = require('hbs')
+
 hbs.registerHelper('mensaje', (men)=>{
     if(men){
         let str = ''
@@ -107,7 +108,7 @@ hbs.registerHelper('courses_card', (courses)=>{
                 '</thead>'+
                 '<tbody>'
         course.students.forEach(student => {
-            let {ide, name: student_name, email, tel} = student
+            let {id : ide, name: student_name, email, tel} = student
                 str+='<tr>'+
                         '<th scope="row">'+ide+'</th>'+
                         '<td>'+student_name+'</td>'+

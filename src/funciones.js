@@ -76,7 +76,8 @@ const course_status = (id) =>{
         course.status = true
     }
     save_course()
-} 
+}
+
 const new_registration = (registration) =>{
     get_list()
     let {ide, course, name, email, tel} = registration
