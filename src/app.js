@@ -6,6 +6,7 @@ const path = require('path')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+var MemoryStore = require('memorystore')(session)
 
 //paths
 const dirPublic = path.join(__dirname , '../public')
@@ -22,6 +23,10 @@ app.use('/js', express.static(dirNode_modules + '/bootstrap/dist/js'))
 
 //session
 app.use(session({
+	cookie: { maxAge: 86400000 },
+ 	store: new MemoryStore({
+      	checkPeriod: 86400000
+    	}),
     secret: 'keyboard cat',
     resave: false,
     saveUninitialized: true
